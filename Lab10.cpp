@@ -19,11 +19,11 @@ double EstimateWithTraps(double a, double b, int n){
     double num = (b-a)/double(n);
     double sum = 0;
     for (double i=0;i<n;i++){
-        double x1 = a+(i*num);
+        double x = a+(i*num);
         double x2 = a+((i+1)*num);
-        double y1 = Fn(x1);
+        double y1 = Fn(x);
         double y2 = Fn(x2);
-        double delta_x = x2-x1;
+        double delta_x = x2-x;
         double area = ((y1+y2)/2)*delta_x;
         sum+= area;
     }
